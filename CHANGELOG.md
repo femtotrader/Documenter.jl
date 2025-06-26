@@ -3,11 +3,22 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## Version [v1.13.0] - 2025-06-19
+
+### Added
+
+* Added new type `RawHTMLHeadContent` to `HTML` format object, which allows to add raw HTML to the head of the HTML output, by passing it as a element in the `assets` keyword argument. ([#2726])
+
+## Version [v1.12.0] - 2025-06-06
+
+### Added
+
+* Added `meta` keyword to `makedocs` which allows to specify default values for `@meta` blocks. This can be used to alter the default values for anything that can be configured via a `@meta` block for all pages of the documentation. E.g. this can be used to set `CollapsedDocStrings = true` on all pages. ([#2512], [#2697])
 
 ### Changed
 
 * Work around GitHub rate limiting of link checks by passing `GITHUB_TOKEN` when applicable and available. ([#2729])
+* Support non-Base64-encoded SSH keys for `DOCUMENTER_KEY` and `DOCUMENTER_KEY_PREVIEWS` ([#2737])
 
 ## Version [v1.11.4] - 2025-05-16
 
@@ -1532,6 +1543,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v1.11.2]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.11.2
 [v1.11.3]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.11.3
 [v1.11.4]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.11.4
+[v1.12.0]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.12.0
+[v1.13.0]: https://github.com/JuliaDocs/Documenter.jl/releases/tag/v1.13.0
 [#198]: https://github.com/JuliaDocs/Documenter.jl/issues/198
 [#245]: https://github.com/JuliaDocs/Documenter.jl/issues/245
 [#487]: https://github.com/JuliaDocs/Documenter.jl/issues/487
@@ -2045,6 +2058,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#2499]: https://github.com/JuliaDocs/Documenter.jl/issues/2499
 [#2505]: https://github.com/JuliaDocs/Documenter.jl/issues/2505
 [#2511]: https://github.com/JuliaDocs/Documenter.jl/issues/2511
+[#2512]: https://github.com/JuliaDocs/Documenter.jl/issues/2512
 [#2513]: https://github.com/JuliaDocs/Documenter.jl/issues/2513
 [#2514]: https://github.com/JuliaDocs/Documenter.jl/issues/2514
 [#2526]: https://github.com/JuliaDocs/Documenter.jl/issues/2526
@@ -2090,6 +2104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#2692]: https://github.com/JuliaDocs/Documenter.jl/issues/2692
 [#2693]: https://github.com/JuliaDocs/Documenter.jl/issues/2693
 [#2695]: https://github.com/JuliaDocs/Documenter.jl/issues/2695
+[#2697]: https://github.com/JuliaDocs/Documenter.jl/issues/2697
 [#2701]: https://github.com/JuliaDocs/Documenter.jl/issues/2701
 [#2710]: https://github.com/JuliaDocs/Documenter.jl/issues/2710
 [#2714]: https://github.com/JuliaDocs/Documenter.jl/issues/2714
@@ -2097,7 +2112,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#2721]: https://github.com/JuliaDocs/Documenter.jl/issues/2721
 [#2722]: https://github.com/JuliaDocs/Documenter.jl/issues/2722
 [#2723]: https://github.com/JuliaDocs/Documenter.jl/issues/2723
+[#2726]: https://github.com/JuliaDocs/Documenter.jl/issues/2726
 [#2729]: https://github.com/JuliaDocs/Documenter.jl/issues/2729
+[#2737]: https://github.com/JuliaDocs/Documenter.jl/issues/2737
 [JuliaLang/julia#36953]: https://github.com/JuliaLang/julia/issues/36953
 [JuliaLang/julia#38054]: https://github.com/JuliaLang/julia/issues/38054
 [JuliaLang/julia#39841]: https://github.com/JuliaLang/julia/issues/39841
